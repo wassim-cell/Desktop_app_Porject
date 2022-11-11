@@ -1,0 +1,357 @@
+﻿<Window x:Class="Paymoi3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:Paymoi3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000"
+         AllowsTransparency="True" WindowStyle="None"
+        WindowStartupLocation="CenterScreen" Background="Transparent" 
+        ResizeMode="NoResize"  
+        MouseDown="Window_MouseDown">
+    <Border Background="#cfd5e5" CornerRadius="40" BorderThickness="2" BorderBrush="#ebedf3"
+            Padding="20"  >
+        <Border CornerRadius="40" >
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                    <GradientStop Color="#fefefe" Offset="0" />
+                    <GradientStop Color="#ededef" Offset="0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid x:Name="ParentGrid" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+
+                </Grid.ColumnDefinitions>
+                <Border CornerRadius="30" Background="#7163ba" Margin="20" >
+                    <Grid>
+                        <StackPanel VerticalAlignment="Top" >
+                            <Button Style="{StaticResource menuButton}" Background="#5a5080">
+                                <Image Width="45" Height="42" >
+                                    <Image.Source>
+                                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/logo.png" />
+                                    </Image.Source>
+                                </Image>
+                            </Button>
+
+                            <Separator Background="#877c55" Margin="15 0 15 10" Height="10" />
+
+                            <Button Style="{StaticResource menuButton}" >
+                                <Image Width="45">
+                                    <Image.Source>
+                                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/homeIcon.png" />
+                                    </Image.Source>
+                                </Image>
+                            </Button>
+
+                            <Button Style="{StaticResource menuButton}">
+                                <Image Width="45">
+                                    <Image.Source>
+                                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/11.png" />
+                                    </Image.Source>
+                                </Image>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}">
+                                <Image Width="55">
+                                    <Image.Source>
+                                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/33.png" />
+                                    </Image.Source>
+                                </Image>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}">
+                                <Image Width="45" Height="45">
+                                    <Image.Source>
+                                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/22.png" />
+                                    </Image.Source>
+                                </Image>
+                            </Button>
+                        </StackPanel>
+
+
+
+                    </Grid>
+
+
+                </Border>
+                <Grid Grid.Column="1" Margin="15 20 15 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="9*" />
+                        <RowDefinition Height="13*"/>
+                        <RowDefinition Height="22*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Margin="7 10 0 25">
+                        <TextBlock Text="Choose the Company " Foreground="#797295" FontSize="13" />
+                        <TextBlock Text="Dashboard" Style="{StaticResource titleText}" />
+                    </StackPanel>
+
+                    <Border Background="#7163ba"  CornerRadius="30" Margin="-8,66,25,56" Grid.RowSpan="3" >
+                        <Grid Margin="0,0,-9,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="99" />
+                                <RowDefinition Height="71" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="auto" />
+
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Margin="13,16,125,10">
+                                <Image.Source>
+                                    <BitmapImage DecodePixelWidth="300" UriSource="/Images/steg1.png" />
+                                </Image.Source>
+                            </Image>
+                            <TextBlock Text="STEG | 0701" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               FontSize="28"
+                               Foreground="LawnGreen"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat" Height="28" Width="167" Grid.ColumnSpan="2" Margin="131,0,0,0"/>
+                            <Button x:Name="btnLogin2"     Grid.Row="1"                       
+                            BorderThickness="0"  Grid.Column="1"
+                            Content="Payer"
+                            Foreground="White"
+                            FontSize="15"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Margin="0,0,35,0" Click="StegBtn"
+                            >
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="#462AD8"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#28AEED"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Width="100" Height="50"
+                                        CornerRadius="20"
+                                        Background="Black">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </Grid>
+
+
+
+                    </Border>
+
+                    <Border Grid.Row="2" Background="#7163ba" CornerRadius="30" Margin="-8,113,25,56" Grid.RowSpan="2" >
+                        <Grid Margin="0,0,-9,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="99" />
+                                <RowDefinition Height="71" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="auto" />
+
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Margin="13,16,125,10">
+                                <Image.Source>
+                                    <BitmapImage DecodePixelWidth="300" UriSource="/Images/sonede1.png" />
+                                </Image.Source>
+                            </Image>
+                            <TextBlock Text="SONEDE | 0502" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               FontSize="28"
+                               Foreground="LawnGreen"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat" Height="28" Width="217" Grid.ColumnSpan="2" Margin="120,0,0,0"/>
+                            <Button x:Name="btnLogin52"     Grid.Row="1"                       
+                            BorderThickness="0"  Grid.Column="1"
+                            Content="Payer"
+                            Foreground="White"
+                            FontSize="15"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Margin="0,0,35,0"
+                            Click="SonedeBtn">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="#462AD8"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#28AEED"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Width="100" Height="50"
+                                        CornerRadius="20"
+                                        Background="Black">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </Grid>
+
+
+                    </Border>
+
+                </Grid>
+                <Grid Grid.Column="2" Margin="5 20 25 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="77" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <Border Background="#7163ba" CornerRadius="30" Margin="0,67,20,54" Grid.RowSpan="2" >
+                        <Grid Margin="0,0,-9,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="99" />
+                                <RowDefinition Height="71" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="auto" />
+
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Margin="13,16,125,10">
+                                <Image.Source>
+                                    <BitmapImage DecodePixelWidth="300" UriSource="/Images/cnss1.png" />
+                                </Image.Source>
+                            </Image>
+                            <TextBlock Text="CNSS | 0206" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               FontSize="28"
+                               Foreground="LawnGreen"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat" Height="28" Width="168" Grid.ColumnSpan="2" Margin="130,0,0,0"/>
+                            <Button x:Name="btnLogin524"     Grid.Row="1"                       
+                            BorderThickness="0"  Grid.Column="1"
+                            Content="Payer"
+                            Foreground="White"
+                            FontSize="15"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Margin="0,0,35,0"
+                            Click="CnssBtn">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="#462AD8"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#28AEED"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Width="100" Height="50"
+                                        CornerRadius="20"
+                                        Background="Black">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </Grid>
+
+
+                    </Border>
+                    <Border Grid.Row="1" Background="#7163ba" CornerRadius="30" Margin="0,208,20,52" Grid.RowSpan="2" >
+                        <Grid Margin="0,0,-9,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="99" />
+                                <RowDefinition Height="71" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="auto" />
+
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Margin="13,16,125,10">
+                                <Image.Source>
+                                    <BitmapImage DecodePixelWidth="300" UriSource="/Images/cnrps2.png" />
+                                </Image.Source>
+                            </Image>
+                            <TextBlock Text="CNRPS | 0702" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               FontSize="28"
+                               Foreground="LawnGreen"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat" Height="28" Width="188" Grid.ColumnSpan="2" Margin="132,0,0,0"/>
+                            <Button x:Name="btnLogin248"     Grid.Row="1"                       
+                            BorderThickness="0"  Grid.Column="1"
+                            Content="Payer"
+                            Foreground="White"
+                            FontSize="15"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Margin="0,0,35,0" Click="CnrpsBtn"
+                            >
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="#462AD8"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#28AEED"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Width="100" Height="50"
+                                        CornerRadius="20"
+                                        Background="Black">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </Grid>
+                    </Border>
+
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
+
+</Window>

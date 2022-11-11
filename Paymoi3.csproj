@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\11.png" />
+    <None Remove="Images\22.png" />
+    <None Remove="Images\33.png" />
+    <None Remove="Images\back-imag.jpg" />
+    <None Remove="Images\back-image.jpg" />
+    <None Remove="Images\back-image.png" />
+    <None Remove="Images\cnrps.png" />
+    <None Remove="Images\cnrps2.png" />
+    <None Remove="Images\cnss.png" />
+    <None Remove="Images\cnss1.png" />
+    <None Remove="Images\code-icon.png" />
+    <None Remove="Images\history.png" />
+    <None Remove="Images\homeIcon.png" />
+    <None Remove="Images\key-icon.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\sonede.png" />
+    <None Remove="Images\sonede1.png" />
+    <None Remove="Images\steg.png" />
+    <None Remove="Images\steg1.png" />
+    <None Remove="Images\supermarket.png" />
+    <None Remove="Images\user-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\11.png" />
+    <Resource Include="Images\22.png" />
+    <Resource Include="Images\33.png" />
+    <Resource Include="Images\back-image.png" />
+    <Resource Include="Images\cnrps.png" />
+    <Resource Include="Images\cnrps2.png" />
+    <Resource Include="Images\cnss.png" />
+    <Resource Include="Images\cnss1.png" />
+    <Resource Include="Images\code-icon.png" />
+    <Resource Include="Images\history.png" />
+    <Resource Include="Images\homeIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\key-icon.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\sonede.png" />
+    <Resource Include="Images\sonede1.png" />
+    <Resource Include="Images\steg.png" />
+    <Resource Include="Images\steg1.png" />
+    <Resource Include="Images\supermarket.png" />
+    <Resource Include="Images\user-icon.png" />
+  </ItemGroup>
+
+</Project>
